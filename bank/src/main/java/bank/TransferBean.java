@@ -11,9 +11,6 @@ public class TransferBean {
     @Inject
     private TransferRepository transferRepository;
 
-    @Inject
-    private AccountBean accountBean;
-
     @Transactional
     public Transfer createTransfer(CreateTransferCommand command) {
         var transfer = new Transfer();

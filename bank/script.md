@@ -34,6 +34,8 @@ A `TransferBean` `createTransfer(CreateTransferCommand command)` metódusából 
 pozitív összeggel, majd a forrás számlával és negatív összeggel!
 A kivételt dobd tovább!
 
+Írd ki az `accountBean` értékét a `transferBean`-ben! `Proxy for view class: bank.AccountBean of EJB: AccountBean`
+
 Mi történik, ha túl nagy összeget utalnál át, és kivétel történik?
 
 Az Exception módosításával hogyan lehet ezen módosítani? (Leszármazás, annotáció?)
@@ -55,3 +57,15 @@ Hogy tudod állítani programozottan, hogy mégis rollback legyen?
 Először a `TransferBean`-en belül. 
 Tedd át másik metódusba, és arra tegyél annotációt! (Lokális metódushívás.)
 Majd egy külön beanben.
+
+* Írd át CDI beanre! Írd ki az `accountBean` értékét a `transferBean`-ben!
+
+* Legyen tranzakcionális! A jóváírás és az átutalás is. Írd ki az `accountBean` értékét a `transferBean`-ben!
+
+`bank.AccountBean$Proxy$_$$_WeldSubclass@2f01280e`
+
+* Transactional scope
+
+Készíts egy `TransactionalFlag` példányt!
+
+[ERROR]     Caused by: org.jboss.weld.exceptions.DeploymentException: WELD-000072: Bean declaring a passivating scope must be passivation capable.  Bean:  Managed Bean [class bank.TransactionFlag] with qualifiers [@Any @Default]"}}}}

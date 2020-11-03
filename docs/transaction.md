@@ -153,6 +153,13 @@ public class EmployeesDao {
 
 ---
 
+## Transaction scoped
+
+* Tranzakció hosszáig létező CDI bean
+* `@TransactionScoped` annotáció
+
+---
+
 ## Izoláció
 
 * Java EE nem támogatja a tranzakciónkénti izolácós szint állítását
